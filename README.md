@@ -1,2 +1,2 @@
-# todo-list
-todo-list
+# webpack-template
+webpack-template
