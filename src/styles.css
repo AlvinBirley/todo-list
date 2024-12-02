@@ -1,5 +1,121 @@
-/* styles.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 body {
-    background-color: rebeccapurple;
+    background-color: coral;
+    width: 100%;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
   }
-  
+
+  .main {
+  display: flex;
+   background-color: rgb(255, 255, 255);
+   padding-left: 30px;
+   padding-right: 30px;
+   align-items: center;
+   flex-direction: column;
+   width:100%;
+   max-width: 50%;
+   padding-bottom: 30px;
+
+  }
+
+
+  .title {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    width: 75%;
+  }
+
+  .top {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+  }
+
+  .header {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .task-btn {
+    padding:15px;
+  }
+
+   #title, #description, #dueDate { 
+    width: 30%;
+  }
+
+ .add-project {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width:100%;
+  max-width: 50%;
+  padding-bottom: 30px;
+ }
+
+ .project-header {
+  background-color: rgb(255, 255, 255);
+ }
+
+ .project-div {
+  margin-top: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  background-color: coral;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.inner-project-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fill, 200px); 
+  gap: 10px;
+  border: black 2px solid;
+  width: 90%;  
+  background-color: white;
+  min-height: 100px;
+  box-sizing: border-box;
+}
+
+.inner-project-div > div {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  height: 200px;   
+  width: 100%;
+  box-sizing: border-box;   
+}
+
+.general {
+  display:flex;
+  align-items: start;
+}
+
+.gen-header {
+  border-bottom: solid 2px black;
+  border-right: solid 2px black;
+  width:100%;
+  text-align: center;
+}
+
+
