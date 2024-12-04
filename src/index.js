@@ -9,3 +9,16 @@ function Note (title, description, dueDate) {
     this.dueDate=dueDate;
   }
 
+/**IMPORTING THE newProject FUNCTION THAT APPENDS A NEW DIV TO THE INNER=PROJECT-DIV**/
+  import { newProject } from './add-project.js';
+
+
+//**ADDING NEW DIVS TO THE INNER-PROJECT-DIV DIV**/
+newProject();
+newProject();
+newProject();
+newProject();
+
+
+
+
