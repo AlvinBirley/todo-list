@@ -1,5 +1,7 @@
 //**ADD NEW PROJECT TO INNER-PROJECT-DIV**/
 
+import {addRadio} from './add-radio.js';
+
 
 //**FUNCTION TO ADD NEW PROJECT DIV TO THE INNER-PROJECT-DIV DIV**/
 export function newProject(){
@@ -24,5 +26,8 @@ const projName = document.getElementById("addProject").value;
     const makeHeader = document.createElement("p");
     makeHeader.textContent += projName;
     projHeader.appendChild(makeHeader);
+
+    //**ADD RADIO INPUT CORRESPONDING WITH TEXT FIELD OF NEW PROJECT INTO THE RADIO INPUT DIV**/
+    addRadio();
 
 }

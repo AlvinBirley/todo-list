@@ -118,4 +118,7 @@ body {
   text-align: center;
 }
 
+.radio-btns input {
+  margin-left: 20px;
+}
 
