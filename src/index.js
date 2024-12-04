@@ -13,12 +13,8 @@ function Note (title, description, dueDate) {
   import { newProject } from './add-project.js';
 
 
-//**ADDING NEW DIVS TO THE INNER-PROJECT-DIV DIV**/
-newProject();
-newProject();
-newProject();
-newProject();
+const projBtn = document.querySelector('.project-btn');
 
-
+projBtn.addEventListener('click', newProject)
 
 
