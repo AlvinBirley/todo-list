@@ -21,29 +21,3 @@ export function createArray () {
 
   }
 
-
-//**ADDING ELEMENTS TO THE ARRAY**//
-let family = createArray()
-family.addElement("Mark")
-console.log(family.getArray())
-family.addElement("Caroline")
-console.log(family.getArray())
-family.addElement("Dad")
-console.log(family.getArray())
-family.addElement("Mom")
-console.log(family.getArray())
-
-
-//**I'M ABLE TO FILTER AND ITERATE THROUGH THE ARRAY**//
-function findMe(familyObj) {
-    const familyArray = familyObj.getArray();
-
-    for(let i = 0; i < familyArray.length; i++) {
-        if (familyArray[i] === "Mark") {
-            console.log("That's me!")
-        }
-        else (console.log("That ain't me!"))
-    }
-}
-
-findMe(family);
