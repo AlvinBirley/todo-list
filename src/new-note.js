@@ -1,6 +1,3 @@
-//greeting.js  
-export const greeting = "Hello, Odinite!"
-
 //general array 
 const genArray = []
 

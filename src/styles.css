@@ -14,7 +14,8 @@ body {
 
   .main {
   display: flex;
-   background-color: rgb(255, 255, 255);
+  background-image: url('./assets/notebook.jpg');
+    background-position: bottom;
    padding-left: 30px;
    padding-right: 30px;
    align-items: center;
@@ -25,14 +26,10 @@ body {
 
   }
 
-
-  .title {
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    width: 75%;
-  }
+ 
 
   .top {
+  
     background-color: rgb(255, 255, 255);
     width: 100%;
     margin: 0;
@@ -57,8 +54,9 @@ body {
   }
 
  .add-project {
+  background-image: url('./assets/notebook.jpg');
+  background-position: bottom;
   display: flex;
-  background-color: rgb(255, 255, 255);
   padding-left: 30px;
   padding-right: 30px;
   align-items: center;
@@ -91,11 +89,11 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(auto-fill, 200px); 
   gap: 10px;
-  border: black 2px solid;
   width: 90%;  
-  background-color: white;
+  background-color: coral;
   min-height: 100px;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 .inner-project-div > div {
@@ -104,6 +102,7 @@ body {
   height: 200px;   
   width: 100%;
   box-sizing: border-box;   
+  border-radius: 15px;
 }
 
 .general {
@@ -112,10 +111,10 @@ body {
 }
 
 .gen-header {
-  border-bottom: solid 2px black;
-  border-right: solid 2px black;
+  border-bottom: solid 2px rgb(236, 149, 9);
   width:100%;
   text-align: center;
+  box-sizing: border-box; 
 }
 
 .radio-btns input {
