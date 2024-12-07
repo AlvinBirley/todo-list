@@ -18,6 +18,5 @@ export function createArray () {
             arr.pop()
         }
     }
-
   }
 

@@ -1,6 +1,3 @@
-//general array 
-const genArray = []
-
 //Factory function to create note 
 function Note (title, description, dueDate) {
     this.title=title;

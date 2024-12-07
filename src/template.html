@@ -10,11 +10,11 @@
     <div class="top">
         <div class="main">
             <h1>ToDo List</h1>
-            <div class="task-btn"><button>Add Task</button></div>
+            <div class="task-btn" id="add-task"><button>Add Task</button></div>
             <div class="header"> 
                 <input type="text" id="title" placeholder="title">
                 <input type="text" id="description" placeholder="description">
-                <input type="text" id="dueDate" placeholder="due date">
+                <input type="date" id="dueDate" placeholder="due date">
             </div>
             <div class="choose-proj"><h2>Choose Project</h2></div>
             <div class="radio-btns"><input type="radio" id="general"> <label for="general">General</label></div>
@@ -23,16 +23,12 @@
         </div>
         <div class="add-project">
             <h1>Add New Project</h1>
-            <div class="project-btn"><button>Add Project</button></div>
+            <div class="project-btn" disabled><button id="make-new-proj">Add Project</button></div>
             <div class="project-field"><input type="text" id="addProject" placeholder="name your new project"></div>
         </div>
     </div>
     <div class="project-div">
         <div class="inner-project-div" id="project-container">
-
-            <div class="general">
-                <div class="gen-header"><p>General</p></div>
-                </div>
              
         </div>
     </div>
