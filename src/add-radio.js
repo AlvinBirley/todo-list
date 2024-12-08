@@ -9,7 +9,7 @@ export function addRadio () {
 
     //**MAKE RADIO INPUT AND GIVE IT LABEL BASED ON VALUE OF TEXT FIELD**/
     const makeRadio = document.createElement("input");
-    makeRadio.type = 'radio';
+    makeRadio.type = 'checkbox';
     const label = document.createElement('label');
     label.textContent = projName;
 

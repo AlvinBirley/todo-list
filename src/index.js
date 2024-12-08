@@ -1,50 +1,59 @@
 import "./styles.css";
-// Import countProjects function
+// Import functions
 import { countProjects } from "./count-projects.js";
-
-// Importing the newProject function that appends a new div to the inner-project-div
 import { newProject } from './add-project.js';
-// Import createArray function
-import { createArray } from './create-array.js';
-// Import disableProjBtn function
+import { addTask } from './add-note.js';  // Import the task-adding function
 import { disableProjBtn } from "./disable-proj-btn.js";
-import { disableTaskBtn } from "./disable-task-btn.js";
 
-// Create projBtn button
+
+
 const projBtn = document.getElementById('make-new-proj');
-// Select projField text input
 const projField = document.getElementById('addProject');
-
-// Select the task button
 const addTaskBtn = document.getElementById('add-task').querySelector('button');
 
-// Select the input fields
+// Select the input fields for task creation
 const titleField = document.getElementById('title');
 const descriptionField = document.getElementById('description');
 const dueDateField = document.getElementById('dueDate');
-
-// Select radio buttons container
 const radioBtnsContainer = document.querySelector('.radio-btns');
 
+// Variable to hold reference to the last created project
+let currentProj = null;
+
+function getSelectedProjectName() {
+    const selectedRadio = radioBtnsContainer.querySelector('input[type="checkbox"]:checked');
+    if (selectedRadio) {
+      return selectedRadio.getAttribute('data-project-name');
+    }
+    return null;  // No project selected
+  }
+
 // Disable project button until text field is clicked
-projField.addEventListener('input', disableProjBtn);
+projField.addEventListener('input', () => {
+  disableProjBtn();
+});
 disableProjBtn();
 
-// Add project div to inner-project-div and count number of divs in inner-project-div
 projBtn.addEventListener('click', function () {
-  newProject();
+  currentProj = newProject();  // Create a new project and save the reference to currentProj
   countProjects();
   disableProjBtn();
 });
 
-// Function to disable Add Task button
+addTaskBtn.addEventListener('click', () => {
+    const selectedProjectName = getSelectedProjectName();
+    if (selectedProjectName && currentProj) {
+      addTask(selectedProjectName);  // Pass the selected project name to the addTask function
+    }
+  });
+
+// Function to disable Add Task button based on the form inputs
 function disableAddTaskBtn() {
   const titleValue = titleField.value.trim();
   const descriptionValue = descriptionField.value.trim();
   const dueDateValue = dueDateField.value.trim();
-  const isRadioChecked = radioBtnsContainer.querySelector('input[type="radio"]:checked') !== null;
+  const isRadioChecked = radioBtnsContainer.querySelector('input[type="checkbox"]:checked') !== null;
 
-  // Enable Add Task button only if all fields are filled and a radio is selected
   if (titleValue && descriptionValue && dueDateValue && isRadioChecked) {
     addTaskBtn.disabled = false;
   } else {
@@ -52,13 +61,13 @@ function disableAddTaskBtn() {
   }
 }
 
-// Event listeners for title, description, and due date fields
+// Event listeners for task input fields
 titleField.addEventListener('input', disableAddTaskBtn);
 descriptionField.addEventListener('input', disableAddTaskBtn);
 dueDateField.addEventListener('input', disableAddTaskBtn);
-
-// Event listener for radio buttons (which will be added as projects)
 radioBtnsContainer.addEventListener('change', disableAddTaskBtn);
 
-// Call disableAddTaskBtn initially to disable the button if fields are empty
+// Initial call to disable the Add Task button if fields are empty
 disableAddTaskBtn();
+
+

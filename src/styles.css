@@ -87,7 +87,7 @@ body {
 .inner-project-div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(auto-fill, 200px); 
+  grid-template-rows: repeat(auto-fill, minmax(300px, auto)); 
   gap: 10px;
   width: 90%;  
   background-color: coral;
@@ -99,15 +99,19 @@ body {
 .inner-project-div > div {
   background: #f0f0f0;
   border: 1px solid #ccc;
-  height: 200px;   
+  min-height: 300px;   
+  max-height: 1000px;
   width: 100%;
   box-sizing: border-box;   
   border-radius: 15px;
+  overflow: auto;
 }
 
 .general {
   display:flex;
+  flex-direction: column;
   align-items: start;
+
 }
 
 .gen-header {
@@ -144,5 +148,25 @@ font-size: xx-small;
   margin-left: 20px;
 }
 
+.note-div {
+  border: solid 2px rgb(9, 115, 236);
+  width:100%;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
+.task-divs {
+  flex: 1; /* This will take up 1/3 of the available space */
+  height: 100%; 
+}
 
+.task-del {
+padding:0px;
+  border-radius: 120px;
+  height: 20px;
+  width:20px;
+  margin-left: -55px;
+}
